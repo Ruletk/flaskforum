@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ _("SignIn") }}{% endblock title %}
+
+{% block content %}
+
+<form method="post">
+    {{ form.csrf_token }}
+    <table>
+        <tr>
+            <td>{{ form.username.label }}</td>
+            <td>{{ form.username }}</td>
+        </tr>
+        <tr>
+            <td>{{ form.password.label }}</td>
+            <td>{{ form.password }}</td>
+        </tr>
+        <tr>
+            <td>{{ form.remember_me.label }}</td>
+            <td>{{ form.remember_me }}</td>
+        </tr>
+        <tr>
+            <td>{{ form.submit }}</td>
+        </tr>
+    </table>
+
+</form>
+
+{% endblock content %}
