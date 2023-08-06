@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ _("Login Required") }}{% endblock title %}
+
+{% block content %}
+<h1>{{_("Login required.")}}</h1>
+<h2> <a href="{{ url_for("users.signin") }}">{{_("You can click here to login")}}</a></h2>
+
+{% endblock content %}

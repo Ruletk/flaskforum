@@ -1,0 +1,7 @@
+{% macro nav_link(menu_item) %}
+{% if request.endpoint == menu_item %}
+<a href="#" class="nav-link active" aria-current="page">{{ menu_item|upper }}</a>
+{% else %}
+<a href="{{ url_for(menu_item) }}" class="nav-link">{{ menu_item|upper }}</a>
+{% endif %}
+{% endmacro %}
